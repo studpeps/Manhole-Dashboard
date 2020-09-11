@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ManHole SigIn</title>
+    <link href="./assets/css/signIn.css" rel="stylesheet"/>
+</head>
+<body>
+  
+<div class="container" id="container">
+	<div class="form-container engineer-container">
+		<form action="#">
+			<h1>Hi,Field Engineer</h1>
+			<input id="engId" type="text" placeholder="EmployeeId" />
+			<input id="engPass" type="password" placeholder="Password" />
+			<button onclick="engineerSubmit()">Submit</button>
+		</form>
+	</div>
+	<div class="form-container manager-container">
+		<form action="#">
+			<h1>Hi,Manager</h1>
+			<input id="mngId" type="text" placeholder="ManagerId" />
+			<input id="mngPass" type="password" placeholder="Password" />
+			<a href="#">Forgot your password?</a>
+			<button onclick="managerSubmit()">Submit</button>
+		</form>
+	</div>
+	<div class="overlay-container">
+		<div class="overlay">
+			<div class="overlay-panel overlay-left">
+				<h1>Hi,Are you a Manager?</h1>
+				<p>Please login with your personal info</p>
+				<button class="ghost" id="manager">Manager</button>
+			</div>
+			<div class="overlay-panel overlay-right">
+				<h1>Hi,Are you a Field Engineer?</h1>
+				<p>Enter your personal details here!</p>
+				<button class="ghost" id="engineer">Field Engineer</button>
+			</div>
+		</div>
+	</div>
+</div>
+<script src="./assets/js/signIn.js"></script>
+</body>
+</html>
