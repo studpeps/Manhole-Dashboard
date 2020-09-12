@@ -1,4 +1,4 @@
 <?php
 
-include_once("manhole-client/signIn.html");
+include_once("signIn.html");
 ?>
