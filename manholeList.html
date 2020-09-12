@@ -15,7 +15,7 @@
     <!-- CSS Files -->
     <link href="../assets/css/bootstrap.min.css" rel="stylesheet" />
     <link href="../assets/css/light-bootstrap-dashboard.css?v=2.0.0 " rel="stylesheet" />
-    <link href="./assets/css/manholeList.css" rel="stylesheet"/>
+    <link href="./assets/css/engineerDashboard.css" rel="stylesheet"/>
   
 </head>
 
@@ -29,7 +29,7 @@
     -->
             <div class="sidebar-wrapper">
                 <div class="logo">
-                    <a href="http://www.creative-tim.com" class="simple-text">
+                    <a href="#" class="simple-text">
                         Company LOGO
                     </a>
                 </div>
@@ -100,261 +100,315 @@
             <div class="body-content">
                 <div class="container-contact100">
                     <div class="wrap-contact100">
-                        <form class="contact100-form validate-form">
-                            <span class="contact100-form-title">
-                              Add a new ManHole 
+                        <form>
+                            <span>
+                             <h2 style="margin-left: 20px;">Add a new ManHole </h2> 
                             </span>
-                            
-                            <div class="wrap-input100 validate-input bg1" data-validate="ManHoleId">
-                                <span class="label-input100">Unique Manhole Id</span>
-                                <input class="input100" onclick="RandomId()" class="input100" type="text" id="id" readonly>
-                            </div>
-            
-                            <div class="wrap-input100 validate-input bg0 rs1-alert-validate" data-validate = "Location Details">
-                                <span class="label-input100">Location</span>
-                                <textarea id="location"class="input100" name="message" placeholder="Location Details"></textarea>
-                            </div>
-                                      
-                            <div class="wrap-input100 validate-input bg0 rs1-alert-validate" data-validate = "Description Box">
-                                <span class="label-input100">Description</span>
-                                <textarea id="Description" class="input100" name="message" placeholder="Description Box"></textarea>
-                            </div>
                             <div id="fillForm">
                                 <form>
                                     <div class="basicInfo">
-                                         <div class="wrap-input100 validate-input bg0 rs1-alert-validate">
-                                         <label class="label-input100">Date of job issue :</label><input class="input100" type="date" id="doi" readonly>
-                                         </div>
-                                         <div class="wrap-input100 validate-input bg0 rs1-alert-validate">
-                                             <label class="label-input100">Date of completion:</label><input class="input100" type="date" id="doc">
-                                         </div>
-                                         <div class="wrap-input100 validate-input bg0 rs1-alert-validate">
-                                             <label class="label-input100">Job Number:</label><input class="input100" type="text" id="jobNo" readonly>
-                                         </div>
-                                         <div class="wrap-input100 validate-input bg0 rs1-alert-validate">
-                                             <label class="label-input100">Manhole Id:</label><input class="input100" type="text" id="manholeId" readonly>
-                                         </div>
-                                         <div class="wrap-input100 validate-input bg0 rs1-alert-validate">
-                                             <label class="label-input100">Start Time:</label><input class="input100" type="time" id="time">
-                                         </div>
-                                         <div class="wrap-input100 validate-input bg0 rs1-alert-validate">
-                                             <label class="label-input100">Vehicle:</label><input class="input100" type="text" id="vehicle">
-                                         </div>
-                                         <div class="wrap-input100 validate-input bg0 rs1-alert-validate">
-                                             <label class="label-input100">Weather:</label><input class="input100" type="text" id="weather">
-                                         </div>
-                                         <div class="wrap-input100 validate-input bg0 rs1-alert-validate">
-                                             <label class="label-input100">Place:</label><input class="input100" type="text" id="place">
-                                         </div>
-                                         <div class="wrap-input100 validate-input bg0 rs1-alert-validate">
-                                             <label class="label-input100">Road:</label><input class="input100" type="text" id="road">
-                                         </div>
-                                         <div class="wrap-input100 validate-input bg0 rs1-alert-validate">
-                                             <label class="label-input100">Type of cover:</label><input class="input100" type="text" id="cover">
-                                         </div>
-                                         <div class="wrap-input100 validate-input bg0 rs1-alert-validate">
-                                             <label class="label-input100">Cover Size:</label><input class="input100" type="text" id="cover">
-                                         </div>
-                                         <div class="wrap-input100 validate-input bg0 rs1-alert-validate">
-                                             <label class="label-input100">Location Detail:</label><input class="input100" type="text" id="cover">
-                                         </div>
-                                         <div class="wrap-input100 validate-input bg0 rs1-alert-validate">
-                                             <label class="label-input100">Material:</label><input class="input100" type="text" id="cover">
-                                         </div>
-                                         <div class="wrap-input100 validate-input bg0 rs1-alert-validate">
-                                             <label class="label-input100">Shape:</label><input class="input100" type="text" id="cover">
-                                         </div>
-                                         <div class="wrap-input100 validate-input bg0 rs1-alert-validate">
-                                             <label class="label-input100">Purpose:</label><input class="input100" type="text" id="cover">
-                                         </div>
-                                         <div class="wrap-input100 validate-input bg0 rs1-alert-validate">
-                                             <label class="label-input100">GPS X:</label><input class="input100" type="text" id="cover">
-                                         </div>
-                                         <div class="wrap-input100 validate-input bg0 rs1-alert-validate">
-                                             <label class="label-input100">GPS Y:</label><input class="input100" type="text" id="cover">
-                                         </div>
-                                         <div class="wrap-input100 validate-input bg0 rs1-alert-validate">
-                                             <label class="label-input100">Catchment:</label><input class="input100" type="text" id="cover">
-                                         </div>
-                                         <div class="wrap-input100 validate-input bg0 rs1-alert-validate">
-                                             <label class="label-input100">Requested By:</label><input class="input100" type="text" id="requestPerson">
-                                         </div>
-                                         <div class="wrap-input100 validate-input bg0 rs1-alert-validate">
-                                             <label class="label-input100">Year Of commission:</label><input class="input100" type="number" id="year">
-                                         </div>
-                                         <div class="wrap-input100 validate-input bg0 rs1-alert-validate">
-                                             <label class="label-input100">Report Prepared By:</label><input class="input100" type="text" id="empName">
-                                         </div>
-                                 </div>
-                                   <div class="internalInfo">
-                                       <hr>
-                                         <h3>Manhole Internal Condition</h3>
-                                         <hr>
-                                         <div class="wrap-input100 validate-input bg0 rs1-alert-validate">
-                                             <label class="label-input100">Damage:</label>
-                                             <select id="damage" class="selectYN">
-                                                 <option value="Y">Y</option>
-                                                 <option value="N">N</option>
-                                             </select>
-                                         </div>
-                                         <div class="wrap-input100 validate-input bg0 rs1-alert-validate">
-                                             <label class="label-input100">Jam:</label>
-                                             <select id="jam" class="selectYN">
-                                                 <option value="Y">Y</option>
-                                                 <option value="N">N</option>
-                                             </select>
-                                         </div>
-                                         <div class="wrap-input100 validate-input bg0 rs1-alert-validate">
-                                             <label class="label-input100">Cover Properly Closed:</label>
-                                             <select id="coverClosed" class="selectYN">
-                                                 <option value="Y">Y</option>
-                                                 <option value="N">N</option>
-                                             </select>
-                                         </div>
-                                         <div class="wrap-input100 validate-input bg0 rs1-alert-validate">
-                                             <label class="label-input100">Corroded:</label>
-                                             <select id="corrode" class="selectYN">
-                                                 <option value="Y">Y</option>
-                                                 <option value="N">N</option>
-                                             </select>
-                                         </div>
-                                         <div class="wrap-input100 validate-input bg0 rs1-alert-validate">
-                                             <label class="label-input100">Wall corrode:</label>
-                                             <select id="wallcorrode" class="selectYN">
-                                                 <option value="Y">Y</option>
-                                                 <option value="N">N</option>
-                                             </select>
-                                         </div>
-                                         <div class="wrap-input100 validate-input bg0 rs1-alert-validate">
-                                             <label class="label-input100">Liner Protuding:</label>
-                                             <select id="liner" class="selectYN">
-                                                 <option value="Y">Y</option>
-                                                 <option value="N">N</option>
-                                                 <option value="Unseen">Unseen</option>
-                                             </select>
-                                         </div>
-                                         <div class="wrap-input100 validate-input bg0 rs1-alert-validate">
-                                             <label class="label-input100">Wall Damaged:</label>
-                                             <select id="wallDamage" class="selectYN">
-                                                 <option value="Major">Major</option>
-                                                 <option value="Minor">Minor</option>
-                                                 <option value="NIL">NIL</option>
-                                                 <option value="Unseen">Unseen</option>
-                                             </select>
-                                         </div>
-                                         <div class="wrap-input100 validate-input bg0 rs1-alert-validate">
-                                             <label class="label-input100">Base Damaged:</label>
-                                             <select id="baseDamage" class="selectYN">
-                                                 <option value="Major">Major</option>
-                                                 <option value="Minor">Minor</option>
-                                                 <option value="NIL">NIL</option>
-                                                 <option value="Unseen">Unseen</option>
-                                             </select>
-                                         </div>
-                                         <div class="wrap-input100 validate-input bg0 rs1-alert-validate">
-                                             <label class="label-input100">Infiltration:</label>
-                                             <select id="infiltration" class="selectYN">
-                                                 <option value="Big">Big</option>
-                                                 <option value="Small">Small</option>
-                                                 <option value="NIL">NIL</option>
-                                                 <option value="Unseen">Unseen</option>
-                                             </select>
-                                         </div>
-                                         <div class="wrap-input100 validate-input bg0 rs1-alert-validate">
-                                             <label class="label-input100">Grease:</label>
-                                             <select id="grease" class="selectYN">
-                                                 <option value="Mild">Mild</option>
-                                                 <option value="Heavy">Heavy</option>
-                                                 <option value="Unseen">Unseen</option>
-                                             </select>
-                                         </div>
-                                         <div class="wrap-input100 validate-input bg0 rs1-alert-validate">
-                                             <label class="label-input100">Debris:</label>
-                                             <select id="baseDamage" class="selectYN">
-                                                 <option value="Mild">Mild</option>
-                                                 <option value="Heavy">Heavy</option>
-                                                 <option value="Unseen">Unseen</option>
-                                             </select>
-                                         </div>
-                                         <div class="wrap-input100 validate-input bg0 rs1-alert-validate">
-                                             <label class="label-input100">Through KeyHole:</label>
-                                             <select id="keyhole" class="selectYN">
-                                                 <option value="Y">Y</option>
-                                                 <option value="N">N</option>
-                                                 <option value="Unseen">Unseen</option>
-                                             </select>
-                                         </div>
-                                         <div class="wrap-input100 validate-input bg0 rs1-alert-validate">
-                                             <label class="label-input100">No. Platform:</label><input class="input100" type="text" id="platform">
-                                         </div>
-                                         <div style="width: 100%;" class="formElements">
-                                             <label class="label-input100">Watermarks:</label>
-                                             <select id="watermark" class="selectYN">
-                                                 <option value="Y">Y</option>
-                                                 <option value="N">N</option>
-                                             </select>
-                                             <label class="label-input100">If yes,state watermark from invert(m):</label><input class="input100" type="text" id="yesWatermark">
-                                         </div>
-                                         
-                                         <div style="width: 100%;" class="formElements">
-                                             <label class="label-input100">MH Ponding:</label>
-                                             <select id="mh" class="selectYN">
-                                                 <option value="Y">Y</option>
-                                                 <option value="N">N</option>
-                                                 <option value="Unseen">Unseen</option>
-                                             </select>
-                                             <label class="label-input100">If yes,state ponding from ground:</label><input class="input100" type="text" id="yesPonding"><br>
-                                             <label class="label-input100">Depth of Ponding from ground:</label><input class="input100" type="text" id="depthPonding">
-                                         </div>
-                                         <div class="wrap-input100 validate-input bg0 rs1-alert-validate">
-                                             <label class="label-input100">Suspected Illegal Discharge:</label>
-                                             <select id="illegal" class="selectYN">
-                                                 <option value="Y">Y</option>
-                                                 <option value="N">N</option>
-                                             </select>
-                                         </div> 
-                                         <div class="wrap-input100 validate-input bg0 rs1-alert-validate">
-                                             <label class="label-input100">Connection found(Indication Number):</label><input class="input100" type="text" id="indicatioNo">
-                                         </div>
+                                        <div class="formElements" >
+                                            <label>Unique Manhole Id</label>
+                                            <input  onclick="RandomId()" type="text" id="id" readonly>
+                                        </div>
+                        
+                                        <div class="formElements">
+                                            <label>Location</label>
+                                            <textarea id="location"class="input100" name="message" placeholder="Location Details"></textarea>
+                                        </div>
+                                                
+                                        <div class="formElements" >
+                                            <label> Job Description</label>
+                                            <textarea id="Description" name="message" placeholder="Description Box"></textarea>
+                                        </div>
                                         
-                                         <div class="wrap-input100 validate-input bg0 rs1-alert-validate">
-                                             <label class="label-input100">Remarks:</label><input class="input100" type="text" id="remarks">
+                                         <div class="formElements">
+                                         <label>Date of job issue :</label><input type="date" id="doi" readonly>
+                                         </div>
+                                         <div class="formElements">
+                                             <label>Date of completion:</label><input type="date" id="doc">
+                                         </div>
+                                         <div class="formElements">
+                                             <label>Job Number:</label><input type="text" id="jobNo" readonly>
+                                         </div>
+                                         <div class="formElements">
+                                             <label>Manhole Id:</label><input type="text" id="manholeId" readonly>
+                                         </div>
+                                         <div class="formElements">
+                                             <label>Start Time:</label><input type="time" id="time">
+                                         </div>
+                                         <div class="formElements">
+                                             <label>Vehicle:</label><input type="text" id="vehicle">
+                                         </div>
+                                         <div class="formElements">
+                                             <label>Weather:</label><input type="text" id="weather">
+                                         </div>
+                                         <div class="formElements">
+                                             <label>Place:</label><input type="text" id="place">
+                                         </div>
+                                         <div class="formElements">
+                                             <label>Road:</label><input type="text" id="road">
+                                         </div>
+                                         <div class="formElements">
+                                             <label>Type of cover:</label><input type="text" id="cover">
+                                         </div>
+                                         <div class="formElements">
+                                             <label>Cover Size:</label><input type="text" id="cover">
+                                         </div>
+                                         <div class="formElements">
+                                             <label>Location Detail:</label><input type="text" id="cover">
+                                         </div>
+                                         <div class="formElements">
+                                             <label>Material:</label><input type="text" id="cover">
+                                         </div>
+                                         <div class="formElements">
+                                             <label>Shape:</label><input type="text" id="cover">
+                                         </div>
+                                         <div class="formElements">
+                                             <label>Purpose:</label><input type="text" id="cover">
+                                         </div>
+                                         <div class="formElements">
+                                             <label>GPS X:</label><input type="text" id="cover">
+                                         </div>
+                                         <div class="formElements">
+                                             <label>GPS Y:</label><input type="text" id="cover">
+                                         </div>
+                                         <div class="formElements">
+                                             <label>Catchment:</label><input type="text" id="cover">
+                                         </div>
+                                         <div class="formElements">
+                                             <label>Requested By:</label><input type="text" id="requestPerson">
+                                         </div>
+                                         <div class="formElements">
+                                             <label>Year Of commission:</label><input type="number" id="year">
+                                         </div>
+                                         <div class="formElements">
+                                             <label>Report Prepared By:</label><input type="text" id="empName">
                                          </div>
                                  </div>
-                                 <div>
-                                     <hr>
-                                     Add Images Section
-                                     <hr>
-                                     <div>
-                                         <label class="label-input100">Add Photo 1</label>
-                                         <input class="input100" type="file" accept="image/*;capture=camera" id="photo1">
-                                         <input class="input100" type="text" placeholder="Image Description" id="photDesc">
-                                     </div>
-                                     <div>
-                                         <label class="label-input100">Add Photo 1</label>
-                                         <input class="input100" type="file" accept="image/*;capture=camera" id="photo1">
-                                         <input class="input100" type="text" placeholder="Image Description" id="photDesc">
-                                     </div>
-                                     <div>
-                                         <label class="label-input100">Add Photo 1</label>
-                                         <input class="input100" type="file" accept="image/*;capture=camera" id="photo1">
-                                         <input class="input100" type="text" placeholder="Image Description" id="photDesc">
-                                     </div>
-                                     <div>
-                                         <label class="label-input100">Add Photo 1</label>
-                                         <input class="input100" type="file" accept="image/*;capture=camera" id="photo1">
-                                         <input class="input100" type="text" placeholder="Image Description" id="photDesc">
-                                     </div>
-                                     <div>
-                                         <label class="label-input100">Add Photo 1</label>
-                                         <input class="input100" type="file" accept="image/*;capture=camera" id="photo1">
-                                         <input class="input100" type="text" placeholder="Image Description" id="photDesc">
-                                     </div>
+                                 <div class="internalInfo">
+                                    <hr>
+                                      <h3>Manhole Internal Condition</h3>
+                                      <hr>
+                                      <div class="formElements">
+                                          <label>Damage:</label>
+                                          <select id="damage" class="selectYN">
+                                              <option value="Y">Y</option>
+                                              <option value="N">N</option>
+                                          </select>
+                                      </div>
+                                      <div class="formElements">
+                                          <label>Jam:</label>
+                                          <select id="jam" class="selectYN">
+                                              <option value="Y">Y</option>
+                                              <option value="N">N</option>
+                                          </select>
+                                      </div>
+                                      <div class="formElements">
+                                          <label>Cover Properly Closed:</label>
+                                          <select id="coverClosed" class="selectYN">
+                                              <option value="Y">Y</option>
+                                              <option value="N">N</option>
+                                          </select>
+                                      </div>
+                                      <div class="formElements">
+                                          <label>Corroded:</label>
+                                          <select id="corrode" class="selectYN">
+                                              <option value="Y">Y</option>
+                                              <option value="N">N</option>
+                                          </select>
+                                      </div>
+                                      <div class="formElements">
+                                          <label>Wall corrode:</label>
+                                          <select id="wallcorrode" class="selectYN">
+                                              <option value="Y">Y</option>
+                                              <option value="N">N</option>
+                                          </select>
+                                      </div>
+                                      <div class="formElements">
+                                          <label>Liner Protuding:</label>
+                                          <select id="liner" class="selectYN">
+                                              <option value="Y">Y</option>
+                                              <option value="N">N</option>
+                                              <option value="Unseen">Unseen</option>
+                                          </select>
+                                      </div>
+                                      <div class="formElements">
+                                          <label>Wall Damaged:</label>
+                                          <select id="wallDamage" class="selectYN">
+                                              <option value="Major">Major</option>
+                                              <option value="Minor">Minor</option>
+                                              <option value="NIL">NIL</option>
+                                              <option value="Unseen">Unseen</option>
+                                          </select>
+                                      </div>
+                                      <div class="formElements">
+                                          <label>Base Damaged:</label>
+                                          <select id="baseDamage" class="selectYN">
+                                              <option value="Major">Major</option>
+                                              <option value="Minor">Minor</option>
+                                              <option value="NIL">NIL</option>
+                                              <option value="Unseen">Unseen</option>
+                                          </select>
+                                      </div>
+                                      <div class="formElements">
+                                          <label>Infiltration:</label>
+                                          <select id="infiltration" class="selectYN">
+                                              <option value="Big">Big</option>
+                                              <option value="Small">Small</option>
+                                              <option value="NIL">NIL</option>
+                                              <option value="Unseen">Unseen</option>
+                                          </select>
+                                      </div>
+                                      <div class="formElements">
+                                          <label>Grease:</label>
+                                          <select id="grease" class="selectYN">
+                                              <option value="Mild">Mild</option>
+                                              <option value="Heavy">Heavy</option>
+                                              <option value="Unseen">Unseen</option>
+                                          </select>
+                                      </div>
+                                      <div class="formElements">
+                                          <label>Debris:</label>
+                                          <select id="baseDamage" class="selectYN">
+                                              <option value="Mild">Mild</option>
+                                              <option value="Heavy">Heavy</option>
+                                              <option value="Unseen">Unseen</option>
+                                          </select>
+                                      </div>
+                                      <div class="formElements">
+                                          <label>Through KeyHole:</label>
+                                          <select id="keyhole" class="selectYN">
+                                              <option value="Y">Y</option>
+                                              <option value="N">N</option>
+                                              <option value="Unseen">Unseen</option>
+                                          </select>
+                                      </div>
+                                      <div  class="formElements">
+                                          <label>MH Ponding:</label>
+                                          <select id="mh" class="selectYN">
+                                              <option value="Y">Y</option>
+                                              <option value="N">N</option>
+                                              <option value="Unseen">Unseen</option>
+                                          </select>
+                                          <br>
+                                          <label>If yes,state ponding from ground:</label><textarea maxlength="500" rows="5" id="yesPonding"></textarea>
+                                          <br>
+                                          <label>Depth of Ponding from ground:</label><input type="text" id="depthPonding">
+              
+                                      </div>
+                                      <div class="formElements">
+                                          <label>Watermarks:</label>
+                                          <select id="watermark" class="selectYN">
+                                              <option value="Y">Y</option>
+                                              <option value="N">N</option>
+                                          </select>
+                                          <br>
+                                          <label id="watermaerLabel">If yes,state watermark from invert(m):</label><textarea maxlength="500" rows="5" id="yesWatermark"></textarea>
+                                      </div>
+                                      
+                                      <div class="formElements">
+                                          <label>Suspected Illegal Discharge:</label>
+                                          <select id="illegal" class="selectYN">
+                                              <option value="Y">Y</option>
+                                              <option value="N">N</option>
+                                          </select>
+                                      </div>
+                                      <div class="formElements">
+                                          <label>Connection found(Indication Number):</label><input type="text" id="indicatioNo">
+                                      </div>
+                                      <div class="formElements">
+                                          <label>No. Platform:</label><input type="text" id="platform">
+                                      </div>
+                                                            
+                                      <div style="width: 80%;" class="formElements">
+                                          <label>Remarks:</label><textarea rows="5" cols="10" id="remarks"></textarea>
+                                      </div>
+                              </div>
+                              <div>
+                                <hr>
+                                Add Images Section
+                                <hr>
+                              
+                                    <table style="border: 2px black; width: 100%;">
+                                        <tr>
+                                            <td>Photo No</td>
+                                            <td>Description</td>
+                                            <td>Grade</td>
+                                            <td>Grease</td>
+                                        </tr>
+                                   
+                                    <tr>
+                                        <td>1</td>
+                                        <td><input type="text" placeholder="Image Description" id="photDesc"></td>
+                                        <td> <input type="text" placeholder="Grade" id="photgrade"></td>
+                                        <td><input type="text" placeholder="Grease" id="photgrease"></td>
+                                        
+                                    </tr>
+                                    <tr>
+                                        <td>2</td>
+                                        <td><input type="text" placeholder="Image Description" id="photDesc"></td>
+                                        <td> <input type="text" placeholder="Grade" id="photgrade"></td>
+                                        <td><input type="text" placeholder="Grease" id="photgrease"></td>
+                                        
+                                    </tr>
+                                    <tr>
+                                        <td>3</td>
+                                        <td><input type="text" placeholder="Image Description" id="photDesc"></td>
+                                        <td> <input type="text" placeholder="Grade" id="photgrade"></td>
+                                        <td><input type="text" placeholder="Grease" id="photgrease"></td>
+                                        
+                                    </tr>
+                                    <tr>
+                                        <td>4</td>
+                                        <td><input type="text" placeholder="Image Description" id="photDesc"></td>
+                                        <td> <input type="text" placeholder="Grade" id="photgrade"></td>
+                                        <td><input type="text" placeholder="Grease" id="photgrease"></td>
+                                        
+                                    </tr>
+                                    <tr>
+                                        <td>5</td>
+                                        <td><input type="text" placeholder="Image Description" id="photDesc"></td>
+                                        <td> <input type="text" placeholder="Grade" id="photgrade"></td>
+                                        <td><input type="text" placeholder="Grease" id="photgrease"></td>
+                                        
+                                    </tr>
+                                </table>
+                                <div>
+                                    <label>Add Photo 1</label>
+                                        <input type="file" onchange="readURL(this);" accept="image/*;capture=camera" id="photo1">
+                                        <button onclick="removeImage()">Remove</button>
+                                        <img id="manholeImg1" src="#" style="width: 0px;  height: 0px;" />
+                                </div>
+                                <div>
+                                    <label>Add Photo 2</label>
+                                        <input type="file" onchange="readURL(this);" accept="image/*;capture=camera" id="photo1">
+                                        <button onclick="removeImage()">Remove</button>
+                                        <img id="manholeImg1" src="#" style="width: 0px;  height: 0px;" />
+                                </div>
+                                <div>
+                                    <label>Add Photo 3</label>
+                                        <input type="file" onchange="readURL(this);" accept="image/*;capture=camera" id="photo1">
+                                        <button onclick="removeImage()">Remove</button>
+                                        <img id="manholeImg1" src="#" style="width: 0px;  height: 0px;" />
+                                </div>
+                                <div>
+                                    <label>Add Photo 4</label>
+                                        <input type="file" onchange="readURL(this);" accept="image/*;capture=camera" id="photo1">
+                                        <button onclick="removeImage()">Remove</button>
+                                        <img id="manholeImg1" src="#" style="width: 0px;  height: 0px;" />
+                                </div>
+                                <div>
+                                    <label>Add Photo 5</label>
+                                        <input type="file" onchange="readURL(this);" accept="image/*;capture=camera" id="photo1">
+                                        <button onclick="removeImage()">Remove</button>
+                                        <img id="manholeImg1" src="#" style="width: 0px;  height: 0px;" />
+                                </div>
                                  
                              </form>
                               </div>
                             <div class="container-contact100-form-btn">
-                                <button type="button" onclick="addManhole()" class="contact100-form-btn">
+                                <button type="submit" onclick="addManhole()" class="contact100-form-btn">
                                     <span>
                                         Submit
                                         <i class="fa fa-long-arrow-right m-l-7" aria-hidden="true"></i>

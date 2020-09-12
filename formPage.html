@@ -81,10 +81,13 @@
                             <label>Job Number:</label><input style="background: lightgray;" type="text" id="jobNo" readonly>
                         </div>
                         <div class="formElements">
-                            <label>Date of completion:</label><input type="date" id="doc">
+                            <label>Map Id:</label><input style="background: lightgray;" type="text" id="mapId" readonly>
                         </div>
                         <div class="formElements">
                             <label>Manhole Id:</label><input style="background: lightgray;" type="text" id="manholeId" readonly>
+                        </div>
+                        <div class="formElements">
+                            <label>Date of completion:</label><input type="date" id="doc">
                         </div>
                         <div class="formElements">
                             <label>Start Time:</label><input type="time" id="time">
@@ -123,6 +126,9 @@
                             <label>Catchment:</label><input type="text" id="catchment">
                         </div>
                         <div class="formElements">
+                            <label>Year Of commission:</label><input type="number" id="year">
+                        </div>
+                        <div class="formElements">
                             <label>GPS X:</label><input type="text" id="gpsX"><button onclick="getLocation()">Get Coordinate</button>
                         </div>
                         <div class="formElements">
@@ -130,9 +136,6 @@
                         </div>
                         <div class="formElements">
                             <label>Requested By:</label><input type="text" id="requestPerson">
-                        </div>
-                        <div class="formElements">
-                            <label>Year Of commission:</label><input type="number" id="year">
                         </div>
                         <div class="formElements">
                             <label>Report Prepared By:</label><input type="text" id="empName">
@@ -281,32 +284,81 @@
                     <hr>
                     Add Images Section
                     <hr>
+                  
+                        <table style="border: 2px black; width: 100%;">
+                            <tr>
+                                <td>Photo No</td>
+                                <td>Description</td>
+                                <td>Grade</td>
+                                <td>Grease</td>
+                            </tr>
+                       
+                        <tr>
+                            <td>1</td>
+                            <td><input type="text" placeholder="Image Description" id="photDesc"></td>
+                            <td> <input type="text" placeholder="Grade" id="photgrade"></td>
+                            <td><input type="text" placeholder="Grease" id="photgrease"></td>
+                            
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td><input type="text" placeholder="Image Description" id="photDesc"></td>
+                            <td> <input type="text" placeholder="Grade" id="photgrade"></td>
+                            <td><input type="text" placeholder="Grease" id="photgrease"></td>
+                            
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td><input type="text" placeholder="Image Description" id="photDesc"></td>
+                            <td> <input type="text" placeholder="Grade" id="photgrade"></td>
+                            <td><input type="text" placeholder="Grease" id="photgrease"></td>
+                            
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td><input type="text" placeholder="Image Description" id="photDesc"></td>
+                            <td> <input type="text" placeholder="Grade" id="photgrade"></td>
+                            <td><input type="text" placeholder="Grease" id="photgrease"></td>
+                            
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td><input type="text" placeholder="Image Description" id="photDesc"></td>
+                            <td> <input type="text" placeholder="Grade" id="photgrade"></td>
+                            <td><input type="text" placeholder="Grease" id="photgrease"></td>
+                            
+                        </tr>
+                    </table>
                     <div>
                         <label>Add Photo 1</label>
-                        <input type="file" onchange="readURL(this);" accept="image/*;capture=camera" id="photo1">
-                        <img id="manholeImg1" src="#" />
-                        <input type="text" placeholder="Image Description" id="photDesc">
-                        <button onclick="removeImage()">Remove</button>
+                            <input type="file" onchange="readURL(this);" accept="image/*;capture=camera" id="photo1">
+                            <button onclick="removeImage()">Remove</button>
+                            <img id="manholeImg1" src="#" style="width: 0px;  height: 0px;" />
                     </div>
                     <div>
-                        <label>Add Photo 1</label>
-                        <input type="file" accept="image/*;capture=camera" id="photo1">
-                        <input type="text" placeholder="Image Description" id="photDesc">
+                        <label>Add Photo 2</label>
+                            <input type="file" onchange="readURL(this);" accept="image/*;capture=camera" id="photo1">
+                            <button onclick="removeImage()">Remove</button>
+                            <img id="manholeImg1" src="#" style="width: 0px;  height: 0px;" />
                     </div>
                     <div>
-                        <label>Add Photo 1</label>
-                        <input type="file" accept="image/*;capture=camera" id="photo1">
-                        <input type="text" placeholder="Image Description" id="photDesc">
+                        <label>Add Photo 3</label>
+                            <input type="file" onchange="readURL(this);" accept="image/*;capture=camera" id="photo1">
+                            <button onclick="removeImage()">Remove</button>
+                            <img id="manholeImg1" src="#" style="width: 0px;  height: 0px;" />
                     </div>
                     <div>
-                        <label>Add Photo 1</label>
-                        <input type="file" accept="image/*;capture=camera" id="photo1">
-                        <input type="text" placeholder="Image Description" id="photDesc">
+                        <label>Add Photo 4</label>
+                            <input type="file" onchange="readURL(this);" accept="image/*;capture=camera" id="photo1">
+                            <button onclick="removeImage()">Remove</button>
+                            <img id="manholeImg1" src="#" style="width: 0px;  height: 0px;" />
                     </div>
                     <div>
-                        <label>Add Photo 1</label>
-                        <input type="file" accept="image/*;capture=camera" id="photo1">
-                        <input type="text" placeholder="Image Description" id="photDesc">
+                        <label>Add Photo 5</label>
+                            <input type="file" onchange="readURL(this);" accept="image/*;capture=camera" id="photo1">
+                            <button onclick="removeImage()">Remove</button>
+                            <img id="manholeImg1" src="#" style="width: 0px;  height: 0px;" />
+                    </div>
                     </div>
                 <button type="button">Save</button>
                 <button type="button" style="float: right;">Submit Report</button>

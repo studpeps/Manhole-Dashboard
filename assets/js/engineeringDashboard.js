@@ -1,21 +1,55 @@
-var manholes=[{id:"100",location:"Place Abcz",DateToBeCompleted:"12-08-2020"},
-{id:"101",location:"Place BCDE",DateToBeCompleted:"20-08-2020"},
-{id:"102",location:"Place GH",DateToBeCompleted:"24-08-2020"},
-{id:"103",location:"Place jdjkf",DateToBeCompleted:"24-08-2020"},
-{id:"104",location:"Place fjvkx",DateToBeCompleted:"32-08-2020"}];
+var manholes=[{id:"100",location:"Place Abcz",uniqueManholeId:"349585435"},
+{id:"101",location:"Place BCDE",uniqueManholeId:"7345574"},
+{id:"102",location:"Place GH",uniqueManholeId:"74824985"},
+{id:"103",location:"Place jdjkf",uniqueManholeId:"937467637"},
+{id:"104",location:"Place fjvkx",uniqueManholeId:"674834849"}];
 
 function appointedManhole(){
+  event.preventDefault();
 var formDoc=document.getElementById("appointDiv");
-for(var i=0;i<manholes.length;i++){
-    var empForm=document.createElement("div");
-    empForm.classList.add("appoint-form");
-    empForm.innerHTML="Location: "+manholes[i].location+"<br> Date to be completed on:"+manholes[i].DateToBeCompleted;
-    var ID=manholes[i].id;
-    empForm.addEventListener("click",function(){
-        openForm(ID);
-    });
-    formDoc.appendChild(empForm);
-}
+var empForm=document.createElement("div");
+var tbl = document.createElement("table");
+var tblhead=document.createElement("thead");
+var head = document.createElement("th");
+var headCell1=document.createElement("td");
+var headText1 = document.createTextNode("Location");
+headCell1.appendChild(headText1);
+var headCell2=document.createElement("td");
+var headText2 = document.createTextNode("Unique Manhole Id");
+headCell2.appendChild(headText2);
+head.appendChild(headCell1);
+head.appendChild(headCell2);
+tblhead.appendChild(head);
+tbl.appendChild(tblhead);
+var tblBody = document.createElement("tbody");
+
+  // cells creation
+  for (var j = 0; j <manholes.length; j++) {
+    // table row creation
+    var row = document.createElement("tr");
+      var cell1 = document.createElement("td");
+      var cellText1 = document.createTextNode(manholes[j].location);
+      cell1.appendChild(cellText1);
+      row.appendChild(cell1);
+      var cell2 = document.createElement("td");
+      var cellText2 = document.createTextNode(manholes[j].uniqueManholeId);
+      cell2.appendChild(cellText2);
+      row.appendChild(cell2);
+      var cell3 = document.createElement("td");
+      var cellbtn = document.createElement("button");
+      cellbtn.innerHTML="Click Here";
+      cellbtn.addEventListener("click",function(){
+        openForm();
+      });
+      cell3.appendChild(cellbtn);
+      row.appendChild(cell3);
+      tblBody.appendChild(row);
+     
+  }
+  tbl.appendChild(tblBody);
+
+empForm.appendChild(tbl);
+formDoc.appendChild(empForm);
 }
 
 function openForm(uniqueId)
