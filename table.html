@@ -112,6 +112,11 @@
               
             
             <div class="manhole-form">
+                <div class="form-group">
+                    <label>Location</label>
+                    <select onchange="selectLocation()" class="form-control" id="holeloc" rows="30">
+                    <option disabled selected> Choose a Loaction :</option> </select>
+                </div>
                 <div class="form-group id">
                     <label>Manhole Unique Id</label>
                     <input type="text" class="form-control" id="uniqueId" placeholder="">
@@ -122,13 +127,13 @@
                     <option> :</option>
                   </select>
                   </div>
-                <div class="form-group">
-                    <label>Location</label>
-                    <textarea class="form-control" id="holeloc" rows="30"></textarea>
-                  </div>
                   <div class="form-group">
                     <label>Description</label>
                     <textarea class="form-control" id="holedesc" rows="30"></textarea>
+                  </div>
+                  <div class="row">
+                     <button class="col">Assign</button>
+                     <button class="col">Clear</button>
                   </div>
                 
             </div>
