@@ -7,20 +7,6 @@ var manholes=[{id:"100",location:"Place Abcz",uniqueManholeId:"349585435"},
 function appointedManhole(){
   event.preventDefault();
 var formDoc=document.getElementById("appointDiv");
-var empForm=document.createElement("div");
-var tbl = document.createElement("table");
-var tblhead=document.createElement("thead");
-var head = document.createElement("th");
-var headCell1=document.createElement("td");
-var headText1 = document.createTextNode("Location");
-headCell1.appendChild(headText1);
-var headCell2=document.createElement("td");
-var headText2 = document.createTextNode("Unique Manhole Id");
-headCell2.appendChild(headText2);
-head.appendChild(headCell1);
-head.appendChild(headCell2);
-tblhead.appendChild(head);
-tbl.appendChild(tblhead);
 var tblBody = document.createElement("tbody");
 
   // cells creation
@@ -46,10 +32,8 @@ var tblBody = document.createElement("tbody");
       tblBody.appendChild(row);
      
   }
-  tbl.appendChild(tblBody);
-
-empForm.appendChild(tbl);
-formDoc.appendChild(empForm);
+  
+formDoc.appendChild(tblBody);
 }
 
 function openForm(uniqueId)

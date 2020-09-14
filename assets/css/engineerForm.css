@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@300;400;700&display=swap');
+
+
+.basicInfo{
+    display: flex;
+    flex-wrap: wrap;
+    background-color: rgb(255, 255, 255);
+    width: 100%;
+}
+form{
+    width: 100%;
+}
+.imageSection
+{
+    height: 100%;
+}
+.internalInfo{
+    width: 100%;
+    margin: 20px 10px 20px;
+    background-color: rgb(255, 255, 255);
+
+}
+.formElements{
+    float: left;
+    padding:10px 15px ;
+    width: 50%;
+}
+input{
+    margin: 10px;
+    padding: 10px 10px;
+}
+textarea{
+  margin: 10px 0px;
+  padding: 10px 10px;
+}
+.formElements label{
+width: 100px;
+color: black;
+font-family: 'Kumbh Sans', sans-serif;
+font-weight: 700;
+}
+
+.internalInfo h3{
+    text-align: center;
+}
+.selectYN{
+    padding: 10px 15px;
+    width:40%;
+}
+#videoElement {
+	width: 500px;
+	height: 375px;
+	background-color: #666;
+}
+
+#remarks{
+    width: 100%;
+}
+table,tr,td{
+    border: 1px solid #ddd;
+      text-align: center;
+  }
+  table{
+    table-layout: fixed;
+    width: 100%;
+  }
+  table input{
+    margin:0px 0px;
+    width: 100%;
+    height: fit-content;
+    border:0px;
+  }
+  table textarea{
+    border:0px;
+    padding: 5px 5px;
+    margin:0px 0px;
+    width: 100%;
+  }
+  td{
+    padding:0px;
+  }
+  .engLocation{
+      width: 72%;
+  }
+  .engId{
+      width: 15%;
+  }
+
+  .photoNo{
+    width: 5%;
+    flex-wrap: wrap;
+  }
+  .photoDescription{
+    width:60%;
+  }
+  .photoGrade{
+  width: 10%;
+  }
+  .photoGrease{
+    width: 25%;
+  }
+  .removeBtn{
+    background-color: tomato;
+    color: white;
+    border-radius: 5px;
+  }
+  .photoBtn{
+    background-color: rgb(104, 104, 233);
+    color: white;
+    border-radius: 5px;
+  }
+  .btn{
+    border: 0px;
+    padding: 0px 35%;
+  }
+  .resetBtn{
+    background-color: rgb(255, 0, 64);
+    color: white;
+    border-radius: 5px;
+    margin: 10px;
+  }
+  .submitBtn{
+    background-color: rgb(79, 226, 79);
+    color: black;
+    border-radius: 5px;
+    margin: 10px;
+  }

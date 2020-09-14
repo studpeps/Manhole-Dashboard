@@ -15,7 +15,7 @@
     <!-- CSS Files -->
     <link href="../assets/css/bootstrap.min.css" rel="stylesheet" />
     <link href="../assets/css/light-bootstrap-dashboard.css?v=2.0.0 " rel="stylesheet" />
-    <link href="./assets/css/engineerDashboard.css" rel="stylesheet"/>
+    <link href="./assets/css/manholeList.css" rel="stylesheet"/>
   
 </head>
 
@@ -81,14 +81,9 @@
                             
                         </ul>
                         <ul class="navbar-nav ml-auto">
+                                                       
                             <li class="nav-item">
-                                <a class="nav-link" href="#pablo">
-                                    <span class="no-icon">Account</span>
-                                </a>
-                            </li>
-                           
-                            <li class="nav-item">
-                                <a class="nav-link" href="#pablo">
+                                <a class="nav-link" href="signIn.html">
                                     <span class="no-icon">Log out</span>
                                 </a>
                             </li>
@@ -119,71 +114,71 @@
                                                 
                                         <div class="formElements" >
                                             <label> Job Description</label>
-                                            <textarea id="Description" name="message" placeholder="Description Box"></textarea>
+                                            <textarea style="margin: 10px 10px;" id="Description" name="message" placeholder="Description Box"></textarea>
                                         </div>
                                         
                                          <div class="formElements">
-                                         <label>Date of job issue :</label><input type="date" id="doi">
+                                         <label>Date of job issue</label><input type="date" id="doi">
                                          </div>
                                          <div class="formElements">
-                                             <label>Date of completion:</label><input type="date" id="doc">
+                                             <label>Date of completion</label><input type="date" id="doc">
                                          </div>
                                          <div class="formElements">
-                                             <label>Job Number:</label><input type="text" id="jobNo">
+                                             <label>Job Number</label><input type="text" id="jobNo">
                                          </div>
                                          <div class="formElements">
-                                             <label>Map Id:</label><input type="text" id="mapId">
+                                             <label>Map Id</label><input type="text" id="mapId">
                                          </div>
                                          <div class="formElements">
-                                             <label>Start Time:</label><input type="time" id="time">
+                                             <label>Start Time</label><input type="time" id="time">
                                          </div>
                                          <div class="formElements">
-                                             <label>Vehicle:</label><input type="text" id="vehicle">
+                                             <label>Vehicle</label><input type="text" id="vehicle">
                                          </div>
                                          <div class="formElements">
-                                             <label>Weather:</label><input type="text" id="weather">
+                                             <label>Weather</label><input type="text" id="weather">
                                          </div>
                                          <div class="formElements">
-                                             <label>Place:</label><input type="text" id="place">
+                                             <label>Place</label><input type="text" id="place">
                                          </div>
                                          <div class="formElements">
-                                             <label>Road:</label><input type="text" id="road">
+                                             <label>Road</label><input type="text" id="road">
                                          </div>
                                          <div class="formElements">
-                                             <label>Type of cover:</label><input type="text" id="cover">
+                                             <label>Type of cover</label><input type="text" id="cover">
                                          </div>
                                          <div class="formElements">
-                                             <label>Cover Size:</label><input type="text" id="cover">
+                                             <label>Cover Size</label><input type="text" id="cover">
                                          </div>
                                          <div class="formElements">
-                                             <label>Location Detail:</label><input type="text" id="cover">
+                                             <label>Location Detail</label><input type="text" id="cover">
                                          </div>
                                          <div class="formElements">
-                                             <label>Material:</label><input type="text" id="cover">
+                                             <label>Material</label><input type="text" id="cover">
                                          </div>
                                          <div class="formElements">
-                                             <label>Shape:</label><input type="text" id="cover">
+                                             <label>Shape</label><input type="text" id="cover">
                                          </div>
                                          <div class="formElements">
-                                             <label>Purpose:</label><input type="text" id="cover">
+                                             <label>Purpose</label><input type="text" id="cover">
                                          </div>
                                          <div class="formElements">
-                                             <label>GPS X:</label><input type="text" id="cover">
+                                             <label>GPS X</label><input type="text" id="cover">
                                          </div>
                                          <div class="formElements">
-                                             <label>GPS Y:</label><input type="text" id="cover">
+                                             <label>GPS Y</label><input type="text" id="cover">
                                          </div>
                                          <div class="formElements">
-                                             <label>Catchment:</label><input type="text" id="cover">
+                                             <label>Catchment</label><input type="text" id="cover">
                                          </div>
                                          <div class="formElements">
-                                             <label>Requested By:</label><input type="text" id="requestPerson">
+                                             <label>Requested By</label><input type="text" id="requestPerson">
                                          </div>
                                          <div class="formElements">
-                                             <label>Year Of commission:</label><input type="number" id="year">
+                                             <label>Year Of commission</label><input type="number" id="year">
                                          </div>
                                          <div class="formElements">
-                                             <label>Report Prepared By:</label><input type="text" id="empName">
+                                             <label>Report Prepared By</label><input type="text" id="empName">
                                          </div>
                                  </div>
                                  <div class="internalInfo">
@@ -292,7 +287,8 @@
                                               <option value="Unseen">Unseen</option>
                                           </select>
                                           <br>
-                                          <label>If yes,state ponding from ground:</label><textarea maxlength="500" rows="5" id="yesPonding"></textarea>
+                                          <label style="width: 100%;" >If yes,state ponding from ground:</label>
+                                          <textarea style="width: 100%;" maxlength="500" rows="2" id="yesPonding"></textarea>
                                           <br>
                                           <label>Depth of Ponding from ground:</label><input type="text" id="depthPonding">
               
@@ -304,7 +300,8 @@
                                               <option value="N">N</option>
                                           </select>
                                           <br>
-                                          <label id="watermaerLabel">If yes,state watermark from invert(m):</label><textarea maxlength="500" rows="5" id="yesWatermark"></textarea>
+                                          <label style="width: 100%;" id="watermarkLabel">If yes,state watermark from invert(m):</label>
+                                          <textarea style="width: 100%;" maxlength="500" rows="2" id="yesWatermark"></textarea>
                                       </div>
                                       
                                       <div class="formElements">
@@ -315,7 +312,7 @@
                                           </select>
                                       </div>
                                       <div class="formElements">
-                                          <label>Connection found(Indication Number):</label><input type="text" id="indicatioNo">
+                                          <label>Connection found (Indication Number):</label><input type="text" id="indicatioNo">
                                       </div>
                                       <div class="formElements">
                                           <label>No. Platform:</label><input type="text" id="platform">
@@ -330,85 +327,92 @@
                                 Add Images Section
                                 <hr>
                               
-                                    <table style="border: 2px black; width: 100%;">
+                                    <table>
                                         <tr>
-                                            <td>Photo No</td>
-                                            <td>Description</td>
-                                            <td>Grade</td>
-                                            <td>Grease</td>
+                                            <td class="photoNo">Photo No</td>
+                                            <td class="photoDescription">Description</td>
+                                            <td class="photoGrade">Grade</td>
+                                            <td class="photoGrease">Grease</td>
                                         </tr>
                                    
                                     <tr>
                                         <td>1</td>
-                                        <td><input type="text" placeholder="Image Description" id="photDesc"></td>
+                                        <td><textarea rows="1" placeholder="Image Description" id="photDesc"></textarea></td>
                                         <td> <input type="text" placeholder="Grade" id="photgrade"></td>
                                         <td><input type="text" placeholder="Grease" id="photgrease"></td>
                                         
                                     </tr>
                                     <tr>
                                         <td>2</td>
-                                        <td><input type="text" placeholder="Image Description" id="photDesc"></td>
+                                        <td><textarea rows="1" placeholder="Image Description" id="photDesc"></textarea></td>
                                         <td> <input type="text" placeholder="Grade" id="photgrade"></td>
                                         <td><input type="text" placeholder="Grease" id="photgrease"></td>
                                         
                                     </tr>
                                     <tr>
                                         <td>3</td>
-                                        <td><input type="text" placeholder="Image Description" id="photDesc"></td>
+                                        <td><textarea rows="1" placeholder="Image Description" id="photDesc"></textarea></td>
                                         <td> <input type="text" placeholder="Grade" id="photgrade"></td>
                                         <td><input type="text" placeholder="Grease" id="photgrease"></td>
                                         
                                     </tr>
                                     <tr>
                                         <td>4</td>
-                                        <td><input type="text" placeholder="Image Description" id="photDesc"></td>
+                                        <td><textarea rows="1" placeholder="Image Description" id="photDesc"></textarea></td>
                                         <td> <input type="text" placeholder="Grade" id="photgrade"></td>
                                         <td><input type="text" placeholder="Grease" id="photgrease"></td>
                                         
                                     </tr>
                                     <tr>
                                         <td>5</td>
-                                        <td><input type="text" placeholder="Image Description" id="photDesc"></td>
+                                        <td><textarea rows="1" placeholder="Image Description" id="photDesc"></textarea></td>
                                         <td> <input type="text" placeholder="Grade" id="photgrade"></td>
                                         <td><input type="text" placeholder="Grease" id="photgrease"></td>
                                         
                                     </tr>
                                 </table>
+                                <div style="margin: 5px;">
                                 <div>
                                     <label>Add Photo 1</label>
-                                        <input type="file" onchange="readURL(this);" accept="image/*;capture=camera" id="photo1">
-                                        <button onclick="removeImage()">Remove</button>
+                                        <input type="file" onchange="readURL(this);" accept="image/*;capture=camera" class="photoBtn" id="photo1">
+                                        <button class="removeBtn" onclick="removeImage()">Remove</button>
                                         <img id="manholeImg1" src="#" style="width: 0px;  height: 0px;" />
                                 </div>
                                 <div>
                                     <label>Add Photo 2</label>
-                                        <input type="file" onchange="readURL(this);" accept="image/*;capture=camera" id="photo1">
-                                        <button onclick="removeImage()">Remove</button>
+                                        <input type="file" onchange="readURL(this);" accept="image/*;capture=camera" class="photoBtn" id="photo1">
+                                        <button class="removeBtn" onclick="removeImage()">Remove</button>
                                         <img id="manholeImg1" src="#" style="width: 0px;  height: 0px;" />
                                 </div>
                                 <div>
                                     <label>Add Photo 3</label>
-                                        <input type="file" onchange="readURL(this);" accept="image/*;capture=camera" id="photo1">
-                                        <button onclick="removeImage()">Remove</button>
+                                        <input type="file" onchange="readURL(this);" accept="image/*;capture=camera" class="photoBtn" id="photo1">
+                                        <button class="removeBtn" onclick="removeImage()">Remove</button>
                                         <img id="manholeImg1" src="#" style="width: 0px;  height: 0px;" />
                                 </div>
                                 <div>
                                     <label>Add Photo 4</label>
-                                        <input type="file" onchange="readURL(this);" accept="image/*;capture=camera" id="photo1">
-                                        <button onclick="removeImage()">Remove</button>
+                                        <input type="file" onchange="readURL(this);" accept="image/*;capture=camera" class="photoBtn" id="photo1">
+                                        <button class="removeBtn" onclick="removeImage()">Remove</button>
                                         <img id="manholeImg1" src="#" style="width: 0px;  height: 0px;" />
                                 </div>
                                 <div>
                                     <label>Add Photo 5</label>
-                                        <input type="file" onchange="readURL(this);" accept="image/*;capture=camera" id="photo1">
-                                        <button onclick="removeImage()">Remove</button>
+                                        <input type="file" onchange="readURL(this);" accept="image/*;capture=camera" class="photoBtn" id="photo1">
+                                        <button class="removeBtn" onclick="removeImage()">Remove</button>
                                         <img id="manholeImg1" src="#" style="width: 0px;  height: 0px;" />
                                 </div>
-                                 
+                            </div>  
                              </form>
                               </div>
-                            <div class="container-contact100-form-btn">
-                                <button type="submit" onclick="addManhole()" class="contact100-form-btn">
+                            <div class="btn">
+                                <button type="button" onclick="clearAll()" class="resetBtn">
+                                    <span>
+                                        Reset
+                                        <i class="fa fa-long-arrow-right m-l-7" aria-hidden="true"></i>
+                                    </span>
+                                </button>
+                                <button type="submit" onclick="addManhole()" class="submitBtn">
                                     <span>
                                         Submit
                                         <i class="fa fa-long-arrow-right m-l-7" aria-hidden="true"></i>

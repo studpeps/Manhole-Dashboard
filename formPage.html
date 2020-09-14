@@ -15,7 +15,7 @@
     <!-- CSS Files -->
     <link href="../assets/css/bootstrap.min.css" rel="stylesheet" />
     <link href="../assets/css/light-bootstrap-dashboard.css?v=2.0.0 " rel="stylesheet" />
-    <link href="./assets/css/engineerDashboard.css" rel="stylesheet"/>
+    <link href="./assets/css/engineerForm.css" rel="stylesheet"/>
   
 </head>
 
@@ -247,7 +247,8 @@
                                 <option value="Unseen">Unseen</option>
                             </select>
                             <br>
-                            <label>If yes,state ponding from ground:</label><textarea maxlength="500" rows="5" id="yesPonding"></textarea>
+                            <label  style="width: 100%;">If yes,state ponding from ground:</label>
+                            <textarea  style="width: 100%;" maxlength="500" rows="5" id="yesPonding"></textarea>
                             <br>
                             <label>Depth of Ponding from ground:</label><input type="text" id="depthPonding">
 
@@ -259,7 +260,8 @@
                                 <option value="N">N</option>
                             </select>
                             <br>
-                            <label id="watermaerLabel">If yes,state watermark from invert(m):</label><textarea maxlength="500" rows="5" id="yesWatermark"></textarea>
+                            <label  style="width: 100%;" id="watermarkLabel">If yes,state watermark from invert(m):</label>
+                            <textarea  style="width: 100%;" maxlength="500" rows="5" id="yesWatermark"></textarea>
                         </div>
                         
                         <div class="formElements">
@@ -270,7 +272,7 @@
                             </select>
                         </div>
                         <div class="formElements">
-                            <label>Connection found(Indication Number):</label><input type="text" id="indicatioNo">
+                            <label>Connection found (Indication Number):</label><input type="text" id="indicatioNo">
                         </div>
                         <div class="formElements">
                             <label>No. Platform:</label><input type="text" id="platform">
@@ -280,93 +282,108 @@
                             <label>Remarks:</label><textarea rows="5" cols="10" id="remarks"></textarea>
                         </div>
                 </div>
-                <div>
+                <div class="imageSection">
                     <hr>
-                    Add Images Section
+                   <!-- Add Images Section-->
                     <hr>
                   
-                        <table style="border: 2px black; width: 100%;">
+                        <table>
                             <tr>
-                                <td>Photo No</td>
-                                <td>Description</td>
-                                <td>Grade</td>
-                                <td>Grease</td>
+                                <td class="photoNo">Photo No</td>
+                                <td class="photoDescription">Description</td>
+                                <td class="photoGrade">Grade</td>
+                                <td class="photoGrease">Grease</td>
                             </tr>
                        
                         <tr>
                             <td>1</td>
-                            <td><input type="text" placeholder="Image Description" id="photDesc"></td>
+                            <td><textarea rows="1" placeholder="Image Description" id="photDesc"></textarea></td>
                             <td> <input type="text" placeholder="Grade" id="photgrade"></td>
                             <td><input type="text" placeholder="Grease" id="photgrease"></td>
                             
                         </tr>
                         <tr>
                             <td>2</td>
-                            <td><input type="text" placeholder="Image Description" id="photDesc"></td>
+                            <td><textarea rows="1" placeholder="Image Description" id="photDesc"></textarea></td>
                             <td> <input type="text" placeholder="Grade" id="photgrade"></td>
                             <td><input type="text" placeholder="Grease" id="photgrease"></td>
                             
                         </tr>
                         <tr>
                             <td>3</td>
-                            <td><input type="text" placeholder="Image Description" id="photDesc"></td>
+                            <td><textarea rows="1" placeholder="Image Description" id="photDesc"></textarea></td>
                             <td> <input type="text" placeholder="Grade" id="photgrade"></td>
                             <td><input type="text" placeholder="Grease" id="photgrease"></td>
                             
                         </tr>
                         <tr>
                             <td>4</td>
-                            <td><input type="text" placeholder="Image Description" id="photDesc"></td>
+                            <td><textarea rows="1" placeholder="Image Description" id="photDesc"></textarea></td>
                             <td> <input type="text" placeholder="Grade" id="photgrade"></td>
                             <td><input type="text" placeholder="Grease" id="photgrease"></td>
                             
                         </tr>
                         <tr>
                             <td>5</td>
-                            <td><input type="text" placeholder="Image Description" id="photDesc"></td>
+                            <td><textarea rows="1" placeholder="Image Description" id="photDesc"></textarea></td>
                             <td> <input type="text" placeholder="Grade" id="photgrade"></td>
                             <td><input type="text" placeholder="Grease" id="photgrease"></td>
                             
                         </tr>
                     </table>
+                    <div style="margin: 5px;">
                     <div>
                         <label>Add Photo 1</label>
-                            <input type="file" onchange="readURL(this);" accept="image/*;capture=camera" id="photo1">
-                            <button onclick="removeImage()">Remove</button>
+                            <input type="file" onchange="readURL(this);" accept="image/*;capture=camera" class="photoBtn" id="photo1">
+                            <button class="removeBtn" onclick="removeImage()">Remove</button>
                             <img id="manholeImg1" src="#" style="width: 0px;  height: 0px;" />
                     </div>
                     <div>
                         <label>Add Photo 2</label>
-                            <input type="file" onchange="readURL(this);" accept="image/*;capture=camera" id="photo1">
-                            <button onclick="removeImage()">Remove</button>
+                            <input type="file" onchange="readURL(this);" accept="image/*;capture=camera" class="photoBtn" id="photo1">
+                            <button class="removeBtn" onclick="removeImage()">Remove</button>
                             <img id="manholeImg1" src="#" style="width: 0px;  height: 0px;" />
                     </div>
                     <div>
                         <label>Add Photo 3</label>
-                            <input type="file" onchange="readURL(this);" accept="image/*;capture=camera" id="photo1">
-                            <button onclick="removeImage()">Remove</button>
+                            <input type="file" onchange="readURL(this);" accept="image/*;capture=camera" class="photoBtn" id="photo1">
+                            <button class="removeBtn" onclick="removeImage()">Remove</button>
                             <img id="manholeImg1" src="#" style="width: 0px;  height: 0px;" />
                     </div>
                     <div>
                         <label>Add Photo 4</label>
-                            <input type="file" onchange="readURL(this);" accept="image/*;capture=camera" id="photo1">
-                            <button onclick="removeImage()">Remove</button>
+                            <input type="file" onchange="readURL(this);" accept="image/*;capture=camera" class="photoBtn" id="photo1">
+                            <button class="removeBtn" onclick="removeImage()">Remove</button>
                             <img id="manholeImg1" src="#" style="width: 0px;  height: 0px;" />
                     </div>
                     <div>
                         <label>Add Photo 5</label>
-                            <input type="file" onchange="readURL(this);" accept="image/*;capture=camera" id="photo1">
-                            <button onclick="removeImage()">Remove</button>
+                            <input type="file" onchange="readURL(this);" accept="image/*;capture=camera" class="photoBtn" id="photo1">
+                            <button class="removeBtn" onclick="removeImage()">Remove</button>
                             <img id="manholeImg1" src="#" style="width: 0px;  height: 0px;" />
                     </div>
-                    </div>
-                <button type="button">Save</button>
-                <button type="button" style="float: right;">Submit Report</button>
-                
+                </div>  
+                 </form>
+                  </div>
+                <div class="btn">
+                    <button type="button" onclick="" class="resetBtn">
+                        <span>
+                            Save 
+                            <i class="fa fa-long-arrow-right m-l-7" aria-hidden="true"></i>
+                        </span>
+                    </button>
+                    <button type="submit" onclick="" class="submitBtn">
+                        <span>
+                            Submit Report
+                            <i class="fa fa-long-arrow-right m-l-7" aria-hidden="true"></i>
+                        </span>
+                    </button>
+                </div>
             </form>
              </div>
         </div>
     </div>
+    
       <script src="./assets/js/engineeringDashboard.js" type="text/javascript"></script>
         </body>
         <!--   Core JS Files   -->

@@ -113,3 +113,30 @@ onetime(document.getElementById("assignbtn"), "click", optionManhole);
    document.getElementById("holedesc").value=ans.desc;
 
     }
+
+    //to show image
+    function readURL(input) {
+        if (input.files && input.files[0]) {
+            var reader = new FileReader();
+    
+            reader.onload = function (e) {
+                $('#manholeImg1')
+                    .attr('src', e.target.result)
+                    .width(200)
+                    .height(150);
+            };
+    
+            reader.readAsDataURL(input.files[0]);
+        }
+            
+    }
+    
+    //to remove image
+    function removeImage(){
+        event.preventDefault();
+        document.getElementById('photo1').value = '';
+        var element=document.getElementById('manholeImg1');
+        document.getElementById('manholeImg1').setAttribute("src","#");
+        document.getElementById('manholeImg1').style.width=0;
+        document.getElementById('manholeImg1').style.height=0;
+    }
