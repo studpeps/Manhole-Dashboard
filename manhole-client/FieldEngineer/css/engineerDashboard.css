@@ -1,4 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@300;400;700&display=swap');
+h3{
+  margin-left: 2%;
+  margin-bottom: 0px;
+  font-weight: 200;
+  color: black;
+}
+.mt {
+  margin-top: 5px;
+}
+.control-label{
+  font-size: large;
+  font-weight: bold;
+}
 *{
   font-size: medium;
 }
@@ -44,9 +57,9 @@ tbody{
     width: 100%;
   }
   td button{
-      background-color: rgb(228, 30, 228);
+      background-color: #d9534f;
       color: white;
-      padding: 0px 10px;
+      padding: 0px 5px;
       border-radius: 5px;
   }
   .engLocation{
