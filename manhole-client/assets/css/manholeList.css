@@ -1,0 +1,185 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@300;400;700&display=swap');
+.appoint{
+    background-color: rgb(240, 197, 240);
+    max-width: 75%;
+    max-height:100%;
+    margin: 10px;
+    padding: 10px 10px;
+}
+.appoint-form{
+    background-color: white;
+    margin: 10px 15px;
+    padding:5px 5px;
+}
+#fillForm{
+ margin: 20px 10px;
+ background-color: rgb(255, 255, 255);
+ width: 100%;
+ height:100%;
+ margin-bottom: 20px;
+ 
+}
+.basicInfo{
+    display: flex;
+    flex-wrap: wrap;
+    background-color: rgb(255, 255, 255);
+    width: 100%;
+}
+.basicInfo .formElements{
+  height: 80px;
+}
+form{
+    width: 100%;
+}
+.internalInfo{
+    width: 100%;
+    margin: 20px 10px 20px;
+    background-color: rgb(255, 255, 255);
+    height: 1200px;
+}
+.formElements{
+    float: left;
+    padding:10px 15px ;
+    width: 50%;
+}
+
+input{
+    margin: 10px;
+    padding: 10px 10px;
+    width: 60%;
+}
+textarea{
+  margin: 10px 0px;
+  padding: 10px 10px;
+  width: 60%;
+}
+.formElements label{
+width: 25%;
+color: black;
+font-family: 'Kumbh Sans', sans-serif;
+font-weight: 700;
+}
+
+.internalInfo h3{
+    text-align: center;
+}
+.selectYN{
+    padding: 10px 15px;
+    width:40%;
+}
+#videoElement {
+	width: 500px;
+	height: 375px;
+	background-color: #666;
+}
+
+#remarks{
+    width: 100%;
+}
+.manhole-form{
+  display: grid;
+  background-color: rgb(255, 255, 255);
+  border-radius: 5px;
+  padding: 20px 20px ;
+}
+.manhole-form .id{
+  float: left;
+  grid-row-start: 0;
+grid-column-start: 0;
+  max-width: 50%;
+}
+.manhole-form .emp{
+  float: right;
+  grid-row-start: 0;
+  grid-column-start: 1;
+  max-width: 50%;
+}
+
+table,tr,td{
+  border: 1px solid #ddd;
+    text-align: center;
+}
+table{
+  table-layout: fixed;
+  width: 100%;
+}
+table input{
+  margin:0px 0px;
+  width: 100%;
+  height: fit-content;
+  border:0px;
+}
+table textarea{
+  border:0px;
+  padding: 5px 5px;
+  margin:0px 0px;
+  width: 100%;
+}
+td{
+  padding:0px;
+}
+.photoNo{
+  width: 5%;
+  flex-wrap: wrap;
+}
+.photoDescription{
+  width:60%;
+}
+.photoGrade{
+width: 10%;
+}
+.photoGrease{
+  width: 25%;
+}
+.removeBtn{
+  background-color: tomato;
+  color: white;
+  border-radius: 5px;
+}
+.photoBtn{
+  background-color: rgb(104, 104, 233);
+  color: white;
+  border-radius: 5px;
+}
+.btn{
+  border: 0px;
+  padding: 0px 35%;
+}
+.resetBtn{
+  background-color: rgb(255, 0, 64);
+  color: white;
+  border-radius: 5px;
+  margin: 10px;
+}
+.submitBtn{
+  background-color: rgb(79, 226, 79);
+  color: black;
+  border-radius: 5px;
+  margin: 10px;
+}
+
+
+/*assign page*/
+ .mapIdDropdown{
+  padding: 10px 250px;
+   color: black;
+   border: 2px solid blueviolet;
+ }
+ .form-group input {
+   margin: 0px 0px;
+   width: 100%;
+ }
+ .colbtn{
+   padding:0px 30%;
+ }
+.assignBtn{
+  border-radius: 5px;
+  max-width: 30%;
+  margin: 0px 10px;
+  background-color: rgb(169, 253, 84);
+}
+.clearBtn{
+    border-radius: 5px;
+    max-width: 30%;
+    background-color: rgb(248, 66, 82);
+}

@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="author" content="Dashboard">
+  <meta name="keyword" content="Dashboard, Bootstrap, Admin, Template, Theme, Responsive, Fluid, Retina">
+  <title>Manhole Home</title>
+
+  <!-- Favicons -->
+  <link href="img/favicon.png" rel="icon">
+  <link href="img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Bootstrap core CSS -->
+  <link href="../lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <!--external css-->
+  <link href="../lib/font-awesome/css/font-awesome.css" rel="stylesheet" />
+  <link rel="stylesheet" type="text/css" href="../css/zabuto_calendar.css">
+  <link rel="stylesheet" type="text/css" href="../lib/gritter/css/jquery.gritter.css" />
+  <!-- Custom styles for this template -->
+  <link href="../css/style.css" rel="stylesheet">
+  <link href="../css/style-responsive.css" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="lib/bootstrap-fileupload/bootstrap-fileupload.css" />
+  <script src="../lib/chart-master/Chart.js"></script>
+  <link href="./css/engineerForm.css" rel="stylesheet">
+  
+
+  <!-- =======================================================
+    Template Name: Dashio
+    Template URL: https://templatemag.com/dashio-bootstrap-admin-template/
+    Author: TemplateMag.com
+    License: https://templatemag.com/license/
+  ======================================================= -->
+</head>
+
+<body>
+  <section id="container">
+    <!-- **********************************************************************************************************************************************************
+        TOP BAR CONTENT & NOTIFICATIONS
+        *********************************************************************************************************************************************************** -->
+    <!--header start-->
+    <header class="header black-bg">
+      <div class="sidebar-toggle-box">
+        <div class="fa fa-bars tooltips" data-placement="right" data-original-title="Toggle Navigation"></div>
+      </div>
+      <!--logo start-->
+      <a href="./engineerDashboard.html" class="logo"><b>DASH<span>IO</span></b></a>
+      <!--logo end-->
+      <div class="top-menu">
+        <ul class="nav pull-right top-menu">
+            <li><button style="border: 1px solid #64c3c2 !important;
+              padding: 5px 15px;
+              margin-right: 15px;
+              background: #4ECDC4;
+              margin-top: 15px;" onclick="logout()">Logout</button></a></li>
+              <script>
+                function logout(){
+                  window.location.href="../../signIn.html"
+                }
+              </script>
+          </ul>
+      </div>
+    </header>
+    <!--header end-->
+    <!-- **********************************************************************************************************************************************************
+        MAIN SIDEBAR MENU
+        *********************************************************************************************************************************************************** -->
+    <!--sidebar start-->
+    <aside>
+      <div id="sidebar" class="nav-collapse ">
+        <!-- sidebar menu start-->
+        <ul class="sidebar-menu" id="nav-accordion">
+          <li class="mt">
+            <a href="./engineerDashboard.html">
+              <i class="fa fa-dashboard"></i>
+              <span>Dashboard</span>
+              </a>
+          </li>
+          <li class="sub-menu">
+            <a href="./engineerRejected.html">
+              <i class="fa fa-window-close-o"></i>
+              <span>Rejected Manholes</span>
+              </a>
+          </li>
+        </ul>
+        <!-- sidebar menu end-->
+      </div>
+    </aside>
+    <!--sidebar end-->
+    <!-- **********************************************************************************************************************************************************
+        MAIN CONTENT
+        *********************************************************************************************************************************************************** -->
+    <!--main content start-->
+    <section id="main-content">
+      <section class="wrapper">
+        <h3><i class="fa fa-angle-right"></i>Assigned Manholes</h3>
+        <div class="row mt">
+            <div class="col-lg-12">
+              <div class="form-panel">
+                <div id="fillForm">
+                    <form>
+                        <div class="basicInfo">
+                             <div class="formElements">
+                             <label>Date of job issue</label><input style="background:lightgray;" type="date" id="doi" readonly>
+                             </div>
+                             <div class="formElements">
+                                 <label>Job Number</label><input style="background: lightgray;" type="text" id="jobNo" readonly>
+                             </div>
+                             <div class="formElements">
+                                 <label>Map Id</label><input style="background: lightgray;" type="text" id="mapId" readonly>
+                             </div>
+                             <div class="formElements">
+                                 <label>Manhole Id</label><input style="background: lightgray;" type="text" id="manholeId" readonly>
+                             </div>
+                             <div class="formElements">
+                                 <label>Date of completion</label><input type="date" id="doc">
+                             </div>
+                             <div class="formElements">
+                                 <label>Start Time</label><input type="time" id="time">
+                             </div>
+                             <div class="formElements">
+                                 <label>Vehicle</label><input type="text" id="vehicle">
+                             </div>
+                             <div class="formElements">
+                                 <label>Weather</label><input type="text" id="weather">
+                             </div>
+                             <div class="formElements">
+                                 <label>Place</label><input type="text" id="place">
+                             </div>
+                             <div class="formElements">
+                                 <label>Road</label><input type="text" id="road">
+                             </div>
+                             <div class="formElements">
+                                 <label>Type of cover</label><input type="text" id="cover">
+                             </div>
+                             <div class="formElements">
+                                 <label>Cover Size</label><input type="text" id="coverSize">
+                             </div>
+                             <div class="formElements">
+                                 <label>Location / Street</label><input type="text" id="location">
+                             </div>
+                             <div class="formElements">
+                                 <label>Material</label><input type="text" id="material">
+                             </div>
+                             <div class="formElements">
+                                 <label>Shape</label><input type="text" id="shape">
+                             </div>
+                             <div class="formElements">
+                                 <label>Purpose</label><input type="text" id="purpose">
+                             </div>
+                             <div class="formElements">
+                                 <label>Catchment</label><input type="text" id="catchment">
+                             </div>
+                             <div class="formElements">
+                                 <label>Year Of commission</label><input type="number" id="year">
+                             </div>
+                             <div style="margin-left: 5%; width: 100%; padding: 5px;">
+                                <button class="btn btn-primary" type="button" onclick="getLocation()">Coordinates</button>
+                            </div>
+                             <div class="formElements">
+                                 <label>GPS X</label>
+                                 <input type="text" id="gpsX"/>
+                             </div>
+                             <div class="formElements">
+                                 <label>GPS Y</label><input type="text" id="gpsY">
+                             </div>
+                             <div class="formElements">
+                                 <label>Requested By</label><input type="text" id="requestPerson">
+                             </div>
+                             <div class="formElements">
+                                 <label>Report Prepared By</label><input type="text" id="empName">
+                             </div>
+                     </div>
+                       <div class="internalInfo">
+                           <hr>
+                             <h4>Manhole Internal Condition</h4>
+                             <hr>
+                             <div class="formElements">
+                                 <label>Damage</label>
+                                 <select id="damage" class="selectYN">
+                                     <option value="Y">Y</option>
+                                     <option value="N">N</option>
+                                 </select>
+                             </div>
+                             <div class="formElements">
+                                 <label>Jam</label>
+                                 <select id="jam" class="selectYN">
+                                     <option value="Y">Y</option>
+                                     <option value="N">N</option>
+                                 </select>
+                             </div>
+                             <div class="formElements">
+                                 <label>Cover Properly Closed</label>
+                                 <select id="coverClosed" class="selectYN">
+                                     <option value="Y">Y</option>
+                                     <option value="N">N</option>
+                                 </select>
+                             </div>
+                             <div class="formElements">
+                                 <label>Corroded</label>
+                                 <select id="corrode" class="selectYN">
+                                     <option value="Y">Y</option>
+                                     <option value="N">N</option>
+                                 </select>
+                             </div>
+                             <div class="formElements">
+                                 <label>Wall corrode</label>
+                                 <select id="wallcorrode" class="selectYN">
+                                     <option value="Y">Y</option>
+                                     <option value="N">N</option>
+                                 </select>
+                             </div>
+                             <div class="formElements">
+                                 <label>Liner Protuding</label>
+                                 <select id="liner" class="selectYN">
+                                     <option value="Y">Y</option>
+                                     <option value="N">N</option>
+                                     <option value="Unseen">Unseen</option>
+                                 </select>
+                             </div>
+                             <div class="formElements">
+                                 <label>Wall Damaged</label>
+                                 <select id="wallDamage" class="selectYN">
+                                     <option value="Major">Major</option>
+                                     <option value="Minor">Minor</option>
+                                     <option value="NIL">NIL</option>
+                                     <option value="Unseen">Unseen</option>
+                                 </select>
+                             </div>
+                             <div class="formElements">
+                                 <label>Base Damaged</label>
+                                 <select id="baseDamage" class="selectYN">
+                                     <option value="Major">Major</option>
+                                     <option value="Minor">Minor</option>
+                                     <option value="NIL">NIL</option>
+                                     <option value="Unseen">Unseen</option>
+                                 </select>
+                             </div>
+                             <div class="formElements">
+                                 <label>Infiltration</label>
+                                 <select id="infiltration" class="selectYN">
+                                     <option value="Big">Big</option>
+                                     <option value="Small">Small</option>
+                                     <option value="NIL">NIL</option>
+                                     <option value="Unseen">Unseen</option>
+                                 </select>
+                             </div>
+                             <div class="formElements">
+                                 <label>Grease</label>
+                                 <select id="grease" class="selectYN">
+                                     <option value="Mild">Mild</option>
+                                     <option value="Heavy">Heavy</option>
+                                     <option value="Unseen">Unseen</option>
+                                 </select>
+                             </div>
+                             <div class="formElements">
+                                 <label>Debris</label>
+                                 <select id="baseDamage" class="selectYN">
+                                     <option value="Mild">Mild</option>
+                                     <option value="Heavy">Heavy</option>
+                                     <option value="Unseen">Unseen</option>
+                                 </select>
+                             </div>
+                             <div class="formElements">
+                                 <label>Through KeyHole</label>
+                                 <select id="keyhole" class="selectYN">
+                                     <option value="Y">Y</option>
+                                     <option value="N">N</option>
+                                     <option value="Unseen">Unseen</option>
+                                 </select>
+                             </div>
+                             <div  class="formElements">
+                                 <label>MH Ponding</label>
+                                 <select id="mh" class="selectYN">
+                                     <option value="Y">Y</option>
+                                     <option value="N">N</option>
+                                     <option value="Unseen">Unseen</option>
+                                 </select>
+                                 <br>
+                                 <label  style="width: 100%;">If yes,state ponding from ground:</label>
+                                 <textarea  style="width: 100%;" maxlength="500" rows="5" id="yesPonding"></textarea>
+                                 <br>
+                                 <label>Depth of Ponding from ground</label><input type="text" id="depthPonding">
+        
+                             </div>
+                             <div class="formElements">
+                                 <label>Watermarks</label>
+                                 <select id="watermark" class="selectYN">
+                                     <option value="Y">Y</option>
+                                     <option value="N">N</option>
+                                 </select>
+                                 <br>
+                                 <label  style="width: 100%;" id="watermarkLabel">If yes,state watermark from invert(m):</label>
+                                 <textarea  style="width: 100%;" maxlength="500" rows="5" id="yesWatermark"></textarea>
+                             </div>
+                             
+                             <div class="formElements">
+                                 <label>Suspected Illegal Discharge</label>
+                                 <select id="illegal" class="selectYN">
+                                     <option value="Y">Y</option>
+                                     <option value="N">N</option>
+                                 </select>
+                             </div>
+                             <div class="formElements">
+                                 <label>Connection found (Indication Number)</label><input type="text" id="indicatioNo">
+                             </div>
+                             <div class="formElements">
+                                 <label>No. Platform</label><input type="text" id="platform">
+                             </div>
+                                                   
+                             <div style="width: 80%;" class="formElements">
+                                 <label>Remarks</label><textarea rows="5" cols="10" id="remarks"></textarea>
+                             </div>
+                     </div>
+                     <div class="imageSection">
+                         <hr>
+                        <!-- Add Images Section-->
+                         <hr>
+                       
+                             <table>
+                                 <tr style="color: black;
+                                 font-size: 15px;">
+                                     <td class="photoNo">Photo No</td>
+                                     <td class="photoDescription">Description</td>
+                                     <td class="photoGrade">Grade</td>
+                                     <td class="photoGrease">Grease</td>
+                                 </tr>
+                            
+                             <tr>
+                                 <td>1</td>
+                                 <td><textarea rows="1" placeholder="Image Description" id="photDesc"></textarea></td>
+                                 <td> <input type="text" placeholder="Grade" id="photgrade"></td>
+                                 <td><input type="text" placeholder="Grease" id="photgrease"></td>
+                                 
+                             </tr>
+                             <tr>
+                                 <td>2</td>
+                                 <td><textarea rows="1" placeholder="Image Description" id="photDesc"></textarea></td>
+                                 <td> <input type="text" placeholder="Grade" id="photgrade"></td>
+                                 <td><input type="text" placeholder="Grease" id="photgrease"></td>
+                                 
+                             </tr>
+                             <tr>
+                                 <td>3</td>
+                                 <td><textarea rows="1" placeholder="Image Description" id="photDesc"></textarea></td>
+                                 <td> <input type="text" placeholder="Grade" id="photgrade"></td>
+                                 <td><input type="text" placeholder="Grease" id="photgrease"></td>
+                                 
+                             </tr>
+                             <tr>
+                                 <td>4</td>
+                                 <td><textarea rows="1" placeholder="Image Description" id="photDesc"></textarea></td>
+                                 <td> <input type="text" placeholder="Grade" id="photgrade"></td>
+                                 <td><input type="text" placeholder="Grease" id="photgrease"></td>
+                                 
+                             </tr>
+                             <tr>
+                                 <td>5</td>
+                                 <td><textarea rows="1" placeholder="Image Description" id="photDesc"></textarea></td>
+                                 <td> <input type="text" placeholder="Grade" id="photgrade"></td>
+                                 <td><input type="text" placeholder="Grease" id="photgrease"></td>
+                                 
+                             </tr>
+                             <tr>
+                                <td>6</td>
+                                <td><textarea rows="1" placeholder="Image Description" id="photDesc"></textarea></td>
+                                <td> <input type="text" placeholder="Grade" id="photgrade"></td>
+                                <td><input type="text" placeholder="Grease" id="photgrease"></td>
+                                
+                            </tr>
+                            <tr>
+                                <td>7</td>
+                                <td><textarea rows="1" placeholder="Image Description" id="photDesc"></textarea></td>
+                                <td> <input type="text" placeholder="Grade" id="photgrade"></td>
+                                <td><input type="text" placeholder="Grease" id="photgrease"></td>
+                                
+                            </tr>
+                         </table>
+                         <div style="display: inline-flexbox; margin: 5px;">
+
+                         <div class="imgDiv">
+                             <label style="width: 100%;">Add Photo 1</label>
+                             <img id="manholeImg1" src="#" style="align-items: center; width: 200px; height: 150px;" />
+                             <div class="imgBtns">
+                                 <input type="file" onchange="readURL(this);" accept="image/*;capture=camera" class="photoBtn" id="photo1">
+                                 <button type="button" class="removeBtn btn btn-danger" onclick="removeImage(this)" name="photo1">Remove</button>
+                            </div>  
+                         </div>
+                         <div class="imgDiv">
+                            <label style="width: 100%;">Add Photo 2</label>
+                            <img id="manholeImg2" src="#" style="align-items: center; width: 200px; height: 150px;" />
+                            <div class="imgBtns">
+                                <input type="file" onchange="readURL(this);" accept="image/*;capture=camera" class="photoBtn" id="photo2">
+                                <button type="button" class="removeBtn btn btn-danger" onclick="removeImage(this)" name="photo2">Remove</button>
+                           </div>  
+                        </div>
+                        <div class="imgDiv">
+                            <label style="width: 100%;">Add Photo 3</label>
+                            <img id="manholeImg3" src="#" style="align-items: center; width: 200px; height: 150px;" />
+                            <div class="imgBtns">
+                                <input type="file" onchange="readURL(this);" accept="image/*;capture=camera" class="photoBtn" id="photo3">
+                                <button type="button" class="removeBtn btn btn-danger" onclick="removeImage(this)" name="photo3">Remove</button>
+                           </div>  
+                        </div>
+                        <div class="imgDiv">
+                            <label style="width: 100%;">Add Photo 4</label>
+                            <img id="manholeImg4" src="#" style="align-items: center; width: 200px; height: 150px;" />
+                            <div class="imgBtns">
+                                <input type="file" onchange="readURL(this);" accept="image/*;capture=camera" class="photoBtn" id="photo4">
+                                <button type="button" class="removeBtn btn btn-danger" onclick="removeImage(this)" name="photo4">Remove</button>
+                           </div>  
+                        </div>
+                        <div class="imgDiv">
+                            <label style="width: 100%;">Add Photo 5</label>
+                            <img id="manholeImg5" src="#" style="align-items: center; width: 200px; height: 150px;" />
+                            <div class="imgBtns">
+                                <input type="file" onchange="readURL(this);" accept="image/*;capture=camera" class="photoBtn" id="photo5">
+                                <button type="button" class="removeBtn btn btn-danger" onclick="removeImage(this)" name="photo5">Remove</button>
+                           </div>  
+                        </div>
+                        <div class="imgDiv">
+                            <label style="width: 100%;">Add Photo 6</label>
+                            <img id="manholeImg6" src="#" style="align-items: center; width: 200px; height: 150px;" />
+                            <div class="imgBtns">
+                                <input type="file" onchange="readURL(this);" accept="image/*;capture=camera" class="photoBtn" id="photo6">
+                                <button type="button" class="removeBtn btn btn-danger" onclick="removeImage(this)" name="photo6">Remove</button>
+                           </div>  
+                        </div>
+                        <div class="imgDiv">
+                            <label style="width: 100%;">Add Photo 7</label>
+                            <img id="manholeImg7" src="#" style="align-items: center; width: 200px; height: 150px;" />
+                            <div class="imgBtns">
+                                <input type="file" onchange="readURL(this);" accept="image/*;capture=camera" class="photoBtn" id="photo7">
+                                <button  type="button"class="removeBtn btn btn-danger" onclick="removeImage(this)" name="photo7">Remove</button>
+                           </div>  
+                        </div>
+                     </div>  
+                     <div class="btn">
+                        <button type="reset" class="btn btn-danger" value="Cancel" class="resetBtn">
+                            Cancel
+                        </button>
+                        <button type="submit" onclick="" class="submitBtn btn btn-success">
+                            <span>
+                                Submit Report
+                                <i class="fa fa-long-arrow-right m-l-7" aria-hidden="true"></i>
+                            </span>
+                        </button>
+                    </div>
+                      </form>
+                       </div>
+             </div>
+            </div>
+        </div>
+      </section>
+    </section>
+    <!--main content end-->
+</section>
+
+
+
+<script src="./js/engineeringDashboard.js" type="text/javascript"></script>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <script>
+      $(function(){
+        $('input:required,textarea:required,select:required').on('blur', function(){
+           if($(this).val()!==''){  //assuming the form doesn't have some fields populated by default.
+             $(this).css("border-color","hsl(120, 76%, 50%)")
+           } else {
+             $(this).css("border-color","#a94442");
+           }
+        });
+  });
+  </script>
+  
+    <!-- js placed at the end of the document so the pages load faster -->
+    <script src="../lib/jquery/jquery.min.js"></script>
+    <script type="text/javascript" language="javascript" src="../lib/advanced-datatable/js/jquery.js"></script>
+    <script src="../lib/bootstrap/js/bootstrap.min.js"></script>
+    <script class="include" type="text/javascript" src="../lib/jquery.dcjqaccordion.2.7.js"></script>
+    <script src="../lib/jquery.scrollTo.min.js"></script>
+    <script src="../lib/jquery.nicescroll.js" type="text/javascript"></script>
+    <script type="text/javascript" language="javascript" src="../lib/advanced-datatable/js/jquery.dataTables.js"></script>
+    <script type="text/javascript" src="../lib/advanced-datatable/js/DT_bootstrap.js"></script>
+    <!--common script for all pages-->
+    <script src="../lib/common-scripts.js"></script>
+    
+</body>
+
+</html>
+
+
+
+
+       
+
+
+
+
+
+
+
+
+
+
+
+
+
+        

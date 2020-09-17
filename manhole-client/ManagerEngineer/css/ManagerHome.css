@@ -1,0 +1,35 @@
+h3{
+    margin-left: 2%;
+    margin-bottom: 0px;
+    font-weight: 200;
+    color: black;
+}
+.mt {
+    margin-top: 5px;
+}
+.control-label{
+    font-size: large;
+    font-weight: bold;
+}
+.green-border{
+    border: 1px solid  hsl(120, 76%, 50%);
+}
+
+input:focus:valid {
+    border: 1px solid  hsl(120, 76%, 50%);
+}
+.addBtns{
+    margin: 0px 35%;
+}
+#clearBtn{
+    margin:0 15%;
+}
+tbody button{
+    background-color: cornflowerblue;
+    color: white;
+    padding: 5px 15px;
+    border-radius: 5px;
+}
+.location{
+    width: 70%;
+}
