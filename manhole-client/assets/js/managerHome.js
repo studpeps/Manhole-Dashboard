@@ -19,7 +19,7 @@ var data=[
         for(var i=0;i<data.length;i++)
         {
         var tbRow=document.createElement("tr");
-        tbRow.classList.add("gradeX");
+        tbRow.classList.add("gradeA");
         var cell1=document.createElement("td");
         var cell2=document.createElement("td");
         var cell3=document.createElement("td");
